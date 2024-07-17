@@ -1,7 +1,7 @@
 ---
 title: OSN Stucture Overview
-prev: docs/first-page
-next: docs/folder/
+prev: docs
+next: allocations
 weight: 1
 ---
 
