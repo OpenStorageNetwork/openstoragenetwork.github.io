@@ -9,7 +9,7 @@ module:
 menu:
   main:
     - name: Admin Docs
-      pageRef: /docs
+      pageRef: /admin-docs
       weight: 1
     - name: User Docs
       pageRef: /docs
