@@ -1,6 +1,6 @@
 ---
 title: OSN User Documentation
-next: system-overview
+next: overview
 ---
 
 The Open Storage Network (OSN) is a distributed data sharing and

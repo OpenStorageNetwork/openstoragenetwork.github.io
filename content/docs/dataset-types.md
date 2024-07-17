@@ -1,8 +1,8 @@
 ---
 title: Open Access & Protected Datasets
-prev: docs/system-overview
-next: docs/folder/
-weight: 20
+prev: portal
+next: dataset-access
+weight: 30
 ---
 
 OSN datasets can be either open access or protected. In the former case,

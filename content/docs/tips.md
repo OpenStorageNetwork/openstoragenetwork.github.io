@@ -1,6 +1,5 @@
 ---
 title: Tips & Tricks
-prev: docs/system-overview
-next: docs/folder/
+prev: transfer-data
 weight: 100
 ---

@@ -1,8 +1,8 @@
 ---
 title: Transfer Data to OSN
-prev: docs/system-overview
-next: docs/folder/
-weight: 10
+prev: dataset-access
+next: tips
+weight: 50
 ---
 
 OSN data sets are comprised of [Ceph

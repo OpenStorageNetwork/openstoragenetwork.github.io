@@ -1,7 +1,7 @@
 ---
 title: Allocations
-prev: system-overview
-next: dataset-access
+prev: overview
+next: portal
 weight: 10
 ---
 

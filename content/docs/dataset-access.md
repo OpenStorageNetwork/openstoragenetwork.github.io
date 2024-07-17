@@ -1,8 +1,8 @@
 ---
 title: Accessing Datasets
 prev: dataset-types
-next: managing-files
-weight: 30
+next: transfer-data
+weight: 40
 ---
 
 OSN supports a RESTful API that is compatible with the basic data access
