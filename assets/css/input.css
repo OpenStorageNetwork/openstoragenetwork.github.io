@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+@layer base {
+    .callout-icon {
+        background-color: var(--bgcolor);
+    }
+
+    .callout-icon-dark {
+        background-color: var(--bgcolordark);
+    }
+
+    .callout-title {
+        color: var(--color);
+        filter: brightness(50%)
+    }
+
+    .callout-title-dark {
+        color: var(--colordark);
+        filter: brightness(200%);
+    }
+}

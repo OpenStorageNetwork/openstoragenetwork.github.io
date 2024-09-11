@@ -41,6 +41,20 @@ menu:
         icon: github
 
 params:
+  help-email: help@osn.mghpcc.org
+  callouts:
+    tip:
+      icon: lightbulb
+    note:
+      icon: info
+    warning:
+      icon: warning
+    caution:
+      icon: report
+  links:
+    access: https://access-ci.org/
+    access-allocations: https://allocations.access-ci.org/
+    osn-portal: https://coldfront.osn.mghpcc.org/
   navbar:
     displayTitle: true
     displayLogo: false

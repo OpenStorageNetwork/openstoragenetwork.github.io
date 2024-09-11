@@ -1,0 +1,21 @@
+{{ $type := lower (.Get 0) }}
+{{ $title := .Get 1 }}
+{{ $settings := "" }}
+
+{{ if index site.Params.extends.callouts $type }}
+{{ $settings = index site.Params.extends.callouts $type }}
+{{ else }}
+{{ $settings = index site.Params.callouts $type }}
+{{ end }}
+
+<div class="flex w-full">
+  <div class="flex flex-col ml-8 my-4">
+      <div class="flex">
+      <h3 class="w-12 flex-shrink-0"><span class="material-symbols-outlined">{{ $settings.icon }}</span></h3>
+      <div class="flex flex-col">
+      {{ if $title }}<h3 class="">{{ $title | markdownify }}</h3>{{ end }}
+      <div class="{{ if not $title }}mt-8{{ end }}">{{ .Inner | markdownify }}</div>
+      </div>
+      </div>
+  </div>
+</div>

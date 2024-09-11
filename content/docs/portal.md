@@ -5,6 +5,18 @@ next: dataset-types
 weight: 20
 ---
 
+OSN uses the Coldfront resource allocation platform developed by the Center for
+Computational Research at the University at Buffalo to manage storage
+allocations on the storage network. The Coldfront application is both open
+source and provides a plugin framework making it adaptable to OSN and other
+third-party requirements. Excellent documentation for the Coldfront project can
+be found at the project's `documentation site <CFRTD_>`_.
+
+OSN has developed a plugin for the Coldfront application that adds the ability
+to manage OSN storage resources. OSN hosts an instance of this extended
+Coldfront application at https://coldfront.osn.mghpcc.org. OSN end users and
+administrators use this application to consume and manage OSN resources.
+
 There are four roles associated with an OSN allocation:
 
 -   Principal Investigator - Responsible for the allocation and serves

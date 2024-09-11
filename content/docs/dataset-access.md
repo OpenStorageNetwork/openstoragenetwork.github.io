@@ -5,6 +5,9 @@ next: transfer-data
 weight: 40
 ---
 
+An active research dataset can remain in OSN storage for up to
+five years.
+
 OSN supports a RESTful API that is compatible with the basic data access
 model of the [Amazon S3
 API](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html). Any
