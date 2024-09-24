@@ -1,8 +1,8 @@
 ---
 title: Tutorials
-prev: docs/system-overview
-next: docs/folder/
-weight: 10
+next: retrieve-data
+weight: 1
+type: docs
 ---
 
 These exercises are to demonstrate common workflows using OSN. You may

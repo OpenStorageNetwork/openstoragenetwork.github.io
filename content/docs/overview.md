@@ -2,7 +2,7 @@
 title: OSN Stucture Overview
 prev: docs
 next: allocations
-weight: 1
+weight: 2
 ---
 
 OSN data is housed in storage pods interconnected by national,
