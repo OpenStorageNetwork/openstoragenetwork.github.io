@@ -1,5 +1,5 @@
 ---
-title: OSN Stucture Overview
+title: OSN Structure Overview
 prev: docs
 next: allocations
 weight: 2
