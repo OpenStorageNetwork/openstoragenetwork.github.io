@@ -5,6 +5,17 @@ next: dataset-types
 weight: 20
 ---
 
+OSN manages resource allocations through the [OSN Coldfront Portal]({{< param "links.osn-portal" >}}). The OSN portal organizes OSN allocations into two tiers: 
+
+1. **Projects** identify the full allocation and have an *OSN Network Quota (TB)*.
+2. **OSN buckets** represent one S3 storage bucket within the project. One project may have many OSN buckets provided the total storage quoted to the buckets is equal to or less than the Project quota. 
+
+{{< callout warning >}}
+ACCESS-CI and Coldfront use the term *allocation* in different ways. Throughout
+this guide, **ACCESS-CI allocation** refers to ACCESS-CI credits (described in the [ACCESS-CI allocations page]({{< relref "allocations" >}})), **OSN project allocation** refers to a project's total OSN storage quota in TB, and **OSN bucket allocation** refers to the quota for a specific OSN bucket within a project.
+{{< /callout >}}
+
+
 OSN uses the Coldfront resource allocation platform developed by the Center for
 Computational Research at the University at Buffalo to manage storage
 allocations on the storage network. The Coldfront application is both open
