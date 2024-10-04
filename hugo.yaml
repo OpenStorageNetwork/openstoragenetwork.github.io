@@ -19,7 +19,7 @@ markup:
 menu:
   main:
     - name: Why Use OSN?
-      pageRef: /about#why-use-osn
+      pageRef: /docs/why-osn
       weight: 1
     - name: About
       pageRef: /about

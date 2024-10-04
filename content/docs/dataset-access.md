@@ -2,7 +2,7 @@
 title: Accessing Datasets
 prev: dataset-types
 next: transfer-data
-weight: 40
+weight: 60
 ---
 
 An active research dataset can remain in OSN storage for up to

@@ -1,8 +1,8 @@
 ---
 title: Quick Start Guide
-prev: docs
+prev: why-osn
 next: overview
-weight: 1
+weight: 10
 ---
 
 Welcome to the OpenStorageNetwork! This page is intended to

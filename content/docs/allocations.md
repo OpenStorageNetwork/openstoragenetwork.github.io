@@ -2,7 +2,7 @@
 title: ACCESS Allocations
 prev: overview
 next: portal
-weight: 10
+weight: 30
 ---
 
 The OpenStorageNetwork provides S3 storage to researchers through the 
@@ -102,7 +102,7 @@ To request an ACCESS allocation, use the following instructions.
 2. Navigate to `Allocations > My Projects > Request New Project > Request a <project type> project`.
 3. Complete the form with the information and documents you gathered in the [“Prepare for your allocation request”]({{< relref "#prepare-for-your-access-allocation-request" >}}) section.
 
-### Exchange your ACCESS credits for OSN storage and other resources
+### Exchange your ACCESS credits for OSN storage{#exchange}
 
 Once your project has been awarded ACCESS credits, you can transfer
 those credits for OSN storage and other resources. To exchange your credits, use the following instructions.

@@ -2,7 +2,7 @@
 title: Open Access & Protected Datasets
 prev: portal
 next: dataset-access
-weight: 30
+weight: 50
 ---
 
 OSN datasets can be either open access or protected. In the former case,
