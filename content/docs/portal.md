@@ -1,5 +1,5 @@
 ---
-title: Project Management Portal
+title: The OSN Portal
 prev: allocations
 next: dataset-types
 weight: 20
@@ -9,8 +9,8 @@ OSN manages resource allocations through the [OSN Coldfront Portal]({{< param "l
 request OSN S3 storage buckets. 
 
 {{< callout warning >}}
-ACCESS-CI and Coldfront use the term *allocation* in different ways. Throughout
-this guide, **ACCESS-CI allocation** refers to ACCESS-CI credits (described in the [ACCESS-CI allocations page]({{< relref "allocations" >}})), **OSN project allocation** refers to a project's total OSN storage quota in TB, and **OSN bucket allocation** refers to the quota for a specific OSN bucket within a project.
+ACCESS and Coldfront use the term *allocation* in different ways. Throughout
+this guide, **ACCESS allocation** refers to ACCESS credits (described in the [ACCESS allocations page]({{< relref "allocations" >}})), **OSN project allocation** refers to a project's total OSN storage quota in TB, and **OSN bucket allocation** refers to the quota for a specific OSN bucket within a project.
 {{< /callout >}}
 
 ## Logging into the OSN portal
@@ -20,7 +20,7 @@ this guide, **ACCESS-CI allocation** refers to ACCESS-CI credits (described in t
 1. Navigate to [the OSN portal]({{< param "links.osn-portal" >}}).
 2. Click the "Log In" button.
 3. Choose the "Log in with institutional account" button. 
-4. **If you're an ACCESS-CI user, you must choose the "ACCESS CI (XSEDE)" identity provider from the dropdown.**
+4. **If you're an ACCESS user, you must choose the "ACCESS CI (XSEDE)" identity provider from the dropdown.**
 
 
     :   -   Click the \"Login\" button
