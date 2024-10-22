@@ -1,7 +1,9 @@
 ---
 title: Why use OSN?
 prev: docs
-next: quick-start
+# TODO: fix after quick start is done
+# next: quick-start
+next: overview
 weight: 1
 ---
 

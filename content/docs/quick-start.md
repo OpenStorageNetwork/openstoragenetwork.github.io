@@ -3,6 +3,7 @@ title: Quick Start Guide
 prev: why-osn
 next: overview
 weight: 10
+draft: true
 ---
 
 Welcome to the Open Storage Network! This page is intended to
