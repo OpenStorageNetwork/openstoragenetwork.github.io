@@ -9,7 +9,7 @@ The Open Storage Network (OSN) supports science and scholarly research that requ
 
 Start with the following entrypoints depending on your situation:
 
-- **You're interested in how OSN can enhance your research**: read about [the features and benefits of OSN]({{< relref "about#why-use-osn" >}}). 
+- **You're interested in how OSN can enhance your research**: read about [the features and benefits of OSN]({{< relref "why-osn" >}}). 
 - **You need an allocation**: for most users, learn [how to get an allocation from the NSF's ACCESS program]({{< relref "allocations" >}}).
 - **You want to use your new allocation**: visit the [quick start guide]({{< relref "quick-start" >}}).
 - **Your institution is interested in hosting an OSN pod**: see the [Host a Pod page]({{< relref host >}}).

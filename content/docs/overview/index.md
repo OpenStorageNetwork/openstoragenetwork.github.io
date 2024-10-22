@@ -3,6 +3,7 @@ title: OSN Structure Overview
 prev: docs
 next: allocations
 weight: 20
+draft: true
 ---
 
 The Open Storage Network (OSN) is formed by a web of storage "pods" interconnected
@@ -12,25 +13,17 @@ storage ideal for transferring and sharing data.
 
 ## OSN features
 
-Key characteristics of OSN storage are:
+OSN features include
 
--   Ability to access data from anywhere via a RESTful interface that
-    follows S3 conventions
--   Federated identity management, allowing access to protected
-    information with existing identity via InCommon or commercial
-    services
--   High speed access and transfer via national research and education
-    networks
--   Security and data integrity
+- Data access anywhere via a RESTful interface that follows S3 conventions
+- Federated identity management, including through 
+  [the NSF's ACCESS program]({{< param "links.access" >}}),
+  InCommon, or commercial services.
+- High speed data access and transfer via national research and education
+  networks.
+- Data security and integrity.
 
-OSN storage pods are located in science DMZs at Big Data Hub sites,
-interconnected by national, high-performance networks. 5 petabytes of
-storage are currently available for allocation.
-
-![OSN Pod Deployment at six sites as of January,
-2021](images/osn-map.png){.align-center width="600px"}
-
-![OSN Storage Pod](images/osn-pod.png){.align-center width="600px"}
+{{< figure src="osn-map.png" alt="OSN Pod Deployment as of January, 2021" caption="OSN Pod Deployment as of January, 2021" >}}
 
 ## File Systems
 
