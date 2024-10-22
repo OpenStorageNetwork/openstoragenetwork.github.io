@@ -1,5 +1,5 @@
 ---
-title: The OpenStorageNetwork Documentation
+title: The Open Storage Network Documentation
 toc: false
 ---
 

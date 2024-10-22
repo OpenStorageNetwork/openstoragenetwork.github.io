@@ -5,7 +5,7 @@ next: portal
 weight: 30
 ---
 
-The OpenStorageNetwork provides S3 storage to researchers through the 
+The Open Storage Network provides S3 storage to researchers through the 
 [NSF's ACCESS]({{< param links.access >}}) program. The ACCESS 
 program helps researchers and educators use advanced computing systems 
 within the United States. ACCESS allocates many types of research 

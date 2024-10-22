@@ -1,6 +1,6 @@
-# OpenStorageNetwork User Documentation
+# Open Storage Network User Documentation
 
-Welcome to the user-facing documentation for the OpenStorageNetwork!
+Welcome to the user-facing documentation for the Open Storage Network!
 
 <!-- Local development section modified from hextra theme README -->
 ## Local Development 
@@ -9,7 +9,7 @@ Pre-requisites: [Hugo](https://gohugo.io/getting-started/installing/), [Go](http
 
 ```shell
 # Clone the repo
-git clone https://github.com/OpenStorageNetwork/user-docs osn-user-docs
+git clone https://github.com/openstoragenetwork/user-docs osn-user-docs
 
 # Change directory
 cd osn-user-docs

@@ -5,21 +5,12 @@ next: allocations
 weight: 20
 ---
 
-OSN data is housed in storage pods interconnected by national,
-high-performance networks creating well-connected, cloud-like storage
-that is easily accessible at high data transfer rates comparable to or
-exceeding the public cloud storage providers, where users can temporariy
-park data, for retrieval by a collaborator or create a repository of
-active research data.
+The Open Storage Network (OSN) is formed by a web of storage "pods" interconnected
+by national, high-performance networks. OSN facilitates collaboration across 
+institutions, systems, and geographical locations by providing accessible
+storage ideal for transferring and sharing data.
 
-This user guide is designed for the following categories of OSN user:
-
--   End Users who wish to view metadata and retrieve data.
--   Data Curators who maintain data sets
--   Data Managers who grant access to data sets for Curators and End
-    Users
-
-## Configuration
+## OSN features
 
 Key characteristics of OSN storage are:
 
