@@ -1,7 +1,7 @@
 ---
 title: The OSN Portal
 prev: allocations
-next: dataset-types
+next: request-bucket
 weight: 40
 ---
 
@@ -58,11 +58,50 @@ to set or reset your password.
 you're an ACCESS user, it should say `<username>@access-ci.org (ACCESS)`. 
 {{< figure src="logged-in.png" alt="Successful log in." >}}
 
-### Manage project users
+### View projects
 
+After logging in, you can view your project list by navigating to `Project > Projects`
+in the navigation bar menu. The project list shows each project your user has access to, 
+whether you're PI of the project or a user. 
 
+{{< callout warning >}}
+If you're an ACCESS user and don't see the project you expect after logging in, 
+verify that your user is listed as `<NAME>@access-ci.org` on the right side of the 
+navigation bar. If not, please log out and 
+[log back in using your ACCESS credentials]({{< relref "#log-in" >}}). 
+If you need assistance, please email {{< help-email >}}.
+{{< /callout >}}
 
-### Request OSN buckets
+{{< figure src="project-list.png" alt="OSN project list view" >}}
+
+To view project details, click the linked **"Project ID"** number associated with the project.
+The **Project detail view** displays all the information associated with a project, including
+
+1. Project name and details
+2. Project user list and roles
+3. Allocations
+4. Attributes (Metadata)
+
+{{< figure src="project-detail.png" alt="OSN project detail view" >}}
+
+### Manage user permissions
+
+Project managers can also add and edit users on the project detail page.
+
+{{< callout caution >}}
+If this is an ACCESS project, you must *add* additional users through the 
+[ACCESS portal]({{< param "links.access" >}}), not the OSN Coldfront Portal.
+{{< /callout >}}
+
+Project PIs are automatically granted "manager" status. To designate additional
+project managers:
+
+1. Click the blue person icon on the right side of the target user's
+row to view their project-specific detail page.
+{{< figure src="project-edit-user.png" alt="Edit user project-specific details" >}}
+2. Toggle their role to "manager" in the **Role** dropdown. 
+{{< figure src="user-role.png" alt="OSN user project-specific detail view" >}}
+3. Click the **Update** button to save the role change.
 
 <!-- -   Principal Investigator - Responsible for the allocation and serves
     as either the Data Manager or the Alternate Data Manager for the
