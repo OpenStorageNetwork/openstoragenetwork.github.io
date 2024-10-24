@@ -40,4 +40,13 @@ resource says "OSN Bucket (Storage)."
 {{< figure src="new-allocation-2.png" alt="Bucket request fields." >}}
 7. Click "Submit" to finalize your request. 
 
-After you submit your bucket request, please allow two business days for the OSN team to review and approve your request. Once approved, you'll receive a confirmation email.
+After you submit your bucket request, please allow two business days for the OSN team to review and approve your request. Once approved, you'll receive a confirmation email and your bucket allocation
+page will contain your new bucket keys and endpoint.
+
+## Bucket attributes
+
+Each OSN bucket has several important *attributes* that you need to read and write data. To view a bucket's attributes, navigate to the **Allocations** section on the project page and click the blue folder next to the bucket.
+
+{{< figure src="bucket-detail-button.png" alt="Bucket detail icon location." >}}
+
+On the bucket detail page, scroll to the **Allocation Attributes** section to see your bucket attributes.
