@@ -49,4 +49,8 @@ Each OSN bucket has several important *attributes* that you need to read and wri
 
 {{< figure src="bucket-detail-button.png" alt="Bucket detail icon location." >}}
 
-On the bucket detail page, scroll to the **Allocation Attributes** section to see your bucket attributes.
+On the bucket detail page, scroll to the **Allocation Attributes** section to see your bucket attributes. Each bucket has the following attributes:
+
+
+
+{{< figure src="bucket-attributes.png" alt="Bucket attributes after deployment." >}}
