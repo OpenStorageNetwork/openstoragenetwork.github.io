@@ -51,6 +51,11 @@ Each OSN bucket has several important *attributes* that you need to read and wri
 
 On the bucket detail page, scroll to the **Allocation Attributes** section to see your bucket attributes. Each bucket has the following attributes:
 
-
+- **OSN Anonymous Access:** (True / False) determines whether the bucket accepts anonymous (keyless) read access.
+- **OSN Bucket Endpoint:** (URL) the address of the server which hosts the bucket.
+- **OSN Bucket Name:** the name of the OSN bucket. 
+- **OSN Bucket Quota (TB):** how much storage capacity the bucket has, in terabytes.
+- **OSN RO Bucket Access Key / Secret:** the access key pair for *read only* access. 
+- **OSN RW Bucket Access Key / Secret:** the access key pair for *read and write* access.
 
 {{< figure src="bucket-attributes.png" alt="Bucket attributes after deployment." >}}
