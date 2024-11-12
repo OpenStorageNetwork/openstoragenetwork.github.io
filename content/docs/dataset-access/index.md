@@ -15,9 +15,8 @@ OSN datasets can be either open access or protected. In the former case,
 keys are only needed to write new objects to the dataset otherwise, read
 access can be accomplished anonymously (e.g. as shown earlier for the
 anonymous cyberduck configuration). Protected datasets require keys for
-both reading and writing. When an open access dataset is created only
-one pair of keys are created, which are accessible to the data manager
-for a project and are used to upload data to the allocation. No keys are
+both reading and writing. When an open access dataset is created, the data manager
+for a project can use the read-write keys to upload data to the allocation. No keys are
 needed by users to download/read the data stored in the allocation.
 
 Protected datasets have two sets of keys. One set allows writing to the
@@ -26,7 +25,7 @@ open access datasets. The second set of keys provides read access to the
 dataset. Anonymous access is not allowed on protected datasets.
 
 Keys are shared with users in two ways. Data managers can choose to
-share keys with other users \"out of band\" by simply sending other
+share keys with other users "out of band" by simply sending other
 users keys that they are interested in via whatever secure mechanisms
 the project uses to store and communicate project-specific secrets (e.g.
 username/passwords, certificates, PKI material, access keys, etc.). Keys
@@ -42,16 +41,7 @@ Once another portal user has been added to a group and given the data
 manager role for that group, she will have access to all the keys (and
 have the same privileges in the portal) as the original data manager for
 the group. Data managers may also add users to a group without assigning
-the user the data manager role. When this happens the user will only
-have access to keys that the data manager has made \"visible\". Visible
-keys are available to all group members whereas non-visible keys are
-only available to group members in the data manager role. In the image
-below, <culbertj@mit.edu> and <jtgoodhue@mghpcc.org> have access to all
-the keys in the project because they are both data managers for the
-project \"JIMTEST\", <dsimmel@psc.edu> will only have access to the two
-keys shown with the \"visible\" checkbox checked.
-
-
+the user the data manager role. 
 
 An active research dataset can remain in OSN storage for up to
 five years.
@@ -61,37 +51,12 @@ model of the [Amazon S3
 API](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html). Any
 software that complies with that API can access data stored on the OSN.
 
-There are three common methods for connecting to and using OSN
+There are two common methods for connecting to and using OSN
 resources:
 
-1.  OSN portal built-in web tools
-2.  Third party desktop applications (e.g. Cyberduck, Rclone)
-3.  Third party data management server applications (e.g. Globus and
+1.  Third party desktop or CLI applications (e.g. Cyberduck, Rclone)
+2.  Third party data management server applications (e.g. Globus and
     iRods)
-
-OSN Portal Built-in Web Tools
------------------------------
-
-The OSN portal ([portal.osn.xsede.org](http://portal.osn.xsede.org))
-supports a simple UI that allows end users to browse allocations and to
-upload and download objects via the browser. This mode of access is most
-appropriate for browsing a dataset and uploading/downloading smaller
-files (typically \<100G).
-
-To use the built-in browser, a user logs onto the OSN portal and clicks
-on one of the allocations that they have been granted access to. This
-brings the user to a searchable/sortable table listing of the allocation
-and its subdirectories. Clicking on any of the objects shown initiates a
-download of the object to the local disk.
-
-To upload a file, the user locates the file on their local filesystem
-and drags the file to the browser window. This initiates an upload to
-the bucket location that the user is currently browsing.
-
-### OSN Basic Bucket Browser
-
-![OSN Basic Bucket Explorer](images/osn-bbb.png){.align-center
-width="600px"}
 
 Third Party Applications
 ------------------------
@@ -109,17 +74,9 @@ can contact your data manager and she will either give you keys or
 create an account for you on the OSN portal where you can retrieve these
 keys. If your data manager creates a portal account for you and gives
 you access to the keys you can visit [OSN
-Portal](https://portal.osn.xsede.org) to retrieve them; the allocations
-you have access tto and their associated keys will be listed on your
-home page.
-
-![OSN Portal User Home page](images/osn-smp.png){.align-center
-width="600px"}
-
-Note that the \"Bucket\" information displayed in the portal has two
-components (this will be important when you configure third party
-tools). The bucket information contains the OSN site/pod location and
-the specific allocation on that pod.
+Portal](https://coldfront.osn.mghpcc.org) to retrieve them; the allocations
+you have access to and their associated keys will be listed on your
+home page. See [the OSN portal documentation]({{< relref "portal/#using-the-osn-portal" >}}) for more information. 
 
 ### Cyberduck
 
@@ -132,31 +89,25 @@ Page](https://cyberduck.io/download/)
 
 Using Cyberduck with OSN is straightforward.
 
-1.  Visit the OSN portal to retrive your Bucket location and allocation
-    names (see image below)
-2.  Visit the OSN portal and retrieve your allocation keys or retrieve
-    them from the data manager for your project
-3.  Open Cyberduck and select the bookmarks icon (see image below)
-4.  Click the add icon at the bottom left of the screen to create the
+1.  Visit the OSN portal to retrieve your Bucket location, bucket
+    name, and keys.
+2.  Open Cyberduck and select the bookmarks icon (see image below)
+3.  Click the add icon at the bottom left of the screen to create the
     bookmark
-5.  Edit the new bookmark to point at the desired OSN pod using you
+4.  Edit the new bookmark to point at the desired OSN pod using you
     allocation key pair
 
-![OSN Portal Location and Allocation](images/osn-loc.png){.align-center
-width="600px"}
 
-![Selecting the bookmarks page and adding new
-bookmark](images/osn-bmark.png){.align-center width="600px"}
+{{< figure src="osn-bmark.png" caption="Selecting the bookmarks page and adding new bookmark" >}}
 
 When specifying the server, use the hostname portion of the location
-(i.e. if the location is <https://mghp.osn.xsede.org> the hostname is
-\"mghp.osn.xsede.org\").
+(i.e. if the location is https://mghp.osn.xsede.org the hostname is
+`mghp.osn.xsede.org`).
 
 When specifying \"Port\", use 443 if the location starts with \"https\";
 use 80 if the location starts with \"http\".
 
-![Adding OSN pod and user information to
-bookmark](images/osn-cyberdemo.png){.align-center width="600px"}
+{{< figure src="osn-cyberdemo.png" caption="Adding OSN pod and user information to bookmark" >}}
 
 #### Anonymous Access Data Sets
 
@@ -165,8 +116,8 @@ buckets anonymously, type \"anonymous\" into the Access ID portion and
 Cyberduck will then select the grayed out anonymous access box in the
 window.
 
-![Using anonymous access as your
-user](images/osn-cyberanon.png){.align-center width="600px"}
+{{< figure src="osn-cyberanon.png" caption="Using anonymous access as your user" >}}
+
 
 Exit the window for the bookmark to save.
 
@@ -182,8 +133,8 @@ increase the Timeout settings for connections.
 Go to Preference \> Connection and change the box next to Timeout for
 opening connections (seconds) and change the setting to 90 seconds.
 
-![Directory listing within
-bucket](images/osn-cyberdir.png){.align-center width="600px"}
+{{< figure src="osn-cyberdir.png" caption="UDirectory listing within bucket" >}}
+
 
 Cyberduck client is a full-fledged transfer client so desktop
 up/downloads can be easily performed for data sets.
@@ -205,14 +156,14 @@ products](https://rclone.org/#providers).
 [Homebrew](https://brew.sh/) is a 3rd party package manager for macOS
 that can be used to easily install many FOSS packages. To install
 Homebrew, please see the documentation on their
-[website](https://brew.sh) or simply run the following command:
-
-    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+[website](https://brew.sh).
 
 Once Homebrew is installed, install rclone by running the following
 command:
 
-    $ brew install rclone
+```bash
+brew install rclone
+```
 
 ##### Install Rclone without Homebrew
 
@@ -260,18 +211,22 @@ If you are on an HPC system, first check to see if rclone is already
 installed. For instance, if you are on a module-based system, you might
 search for the rclone module.
 
-    $ module spider rclone
+```bash
+module spider rclone
+```
 
 If it is available, then you can `module load rclone` and then follow
 the rest of this documentation.
 
 If rclone is not available on your HPC system, you can install it into
-your \$HOME directory. First, fetch and unzip the precompiled rclone
+your `$HOME` directory. First, fetch and unzip the precompiled rclone
 binary.
 
-    $ curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
-    $ unzip rclone-current-linux-amd64.zip
-    $ cd rclone-*-linux-amd64
+```bash
+curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
+unzip rclone-current-linux-amd64.zip
+cd rclone-*-linux-amd64
+```
 
 Place it in a directory that you have write access to and is in your
 \$PATH. If one is not available, you can create one.

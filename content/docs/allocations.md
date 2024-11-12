@@ -24,8 +24,8 @@ you need help getting in contact, please send a ticket to
 
 Researchers can request OSN project allocations between 10 and 50 Terabytes (TB) through the 
 [ACCESS allocation proposal process]({{< param "links.access-allocations" >}}).
-If your project needs more than 50 TB of OSN storage, please 
-[contact us]({{< relref "about#contact" >}})
+If your project needs more than 50 TB of OSN storage, please contact us at
+{{< help-email >}}
 for options, including purchasing an OSN pod for your institution.
 
 ACCESS allocates resources using a "credit" system. The general process

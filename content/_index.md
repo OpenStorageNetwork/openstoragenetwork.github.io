@@ -20,9 +20,9 @@ Start with the following entrypoints depending on your situation:
   {{< card link="https://www.openstoragenetwork.org/" title="OSN Home Page" icon="home" >}}
   <!-- {{< card link="docs/quick-start" title="Quick Start Guide" icon="lightning-bolt" >}} -->
   {{< card link="docs" title="User Docs" icon="book-open" >}}
-  {{< card link="tutorials" title="Tutorials" icon="pencil" >}}
-  {{< card link="about" title="About" icon="user" >}}
-  {{< card link="about#get-help" title="Get Help" icon="question-mark-circle" >}}
-  {{< card link="pod-hosts" title="Pod Hosts" icon="cloud-upload" >}}
+  <!-- {{< card link="tutorials" title="Tutorials" icon="pencil" >}} -->
+  <!-- {{< card link="about" title="About" icon="user" >}} -->
+  <!-- {{< card link="about#get-help" title="Get Help" icon="question-mark-circle" >}}
+  {{< card link="pod-hosts" title="Pod Hosts" icon="cloud-upload" >}} -->
 {{< /cards >}}
 

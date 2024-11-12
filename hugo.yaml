@@ -21,21 +21,21 @@ menu:
     - name: Why Use OSN?
       pageRef: /docs/why-osn
       weight: 1
-    - name: About
-      pageRef: /about
-      weight: 2
+    # - name: About
+    #   pageRef: /about
+    #   weight: 2
     - name: User Docs
       pageRef: /docs
       weight: 3
-    - name: Tutorials
-      pageRef: /tutorials
-      weight: 4
-    - name: Get Help
-      pageRef: /about#get-help
-      weight: 5
-    - name: Pod Hosts
-      pageRef: /pod-hosts
-      weight: 6
+    # - name: Tutorials
+    #   pageRef: /tutorials
+    #   weight: 4
+    # - name: Get Help
+    #   pageRef: /about#get-help
+    #   weight: 5
+    # - name: Pod Hosts
+    #   pageRef: /pod-hosts
+    #   weight: 6
     - name: Search
       weight: 7
       params:
