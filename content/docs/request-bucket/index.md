@@ -59,3 +59,19 @@ On the bucket detail page, scroll to the **Allocation Attributes** section to se
 - **OSN RW Bucket Access Key / Secret:** the access key pair for *read and write* access.
 
 {{< figure src="bucket-attributes.png" alt="Bucket attributes after deployment." >}}
+
+## Sharing credentials
+
+You can share keys with other users either by
+incorporating the new user into the 
+[OSN portal project]({{< relref "portal#manage-user-permissions">}}), or 
+by copying the endpoint, bucket name, and access keys and secrets into 
+whatever secure mechanism
+your group or project uses to handle secrets or protected data.
+
+{{< callout warning >}}
+When sharing out-of-band, don't expose sensitive keys
+to public access. Someone who has a key has full access to the bucket.
+If you're using the keys as part of a project in a version control repository, 
+be careful not to commit them to your repo.
+{{< /callout >}}

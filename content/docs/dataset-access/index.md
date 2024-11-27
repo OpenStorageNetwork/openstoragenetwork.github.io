@@ -1,145 +1,112 @@
 ---
 title: Read and Write Data
 prev: request-bucket
-next: transfer-data
+next: tips
 weight: 60
 ---
 
-Once you have an [allocation]({{< relref allocations >}}) and have [created a bucket]({{< relref "request-bucket" >}}) (or, someone sent you keys
-or a public endpoint), you're ready to read or write data.
+Once you have an [allocation]({{< relref allocations >}}) and have [created a bucket]({{< relref "request-bucket" >}}) 
+(or, someone [sent you keys or an open access endpoint]({{< relref "request-bucket#sharing-credentials" >}}) ), you're ready to read or write data.
 
 
 ## Dataset types
 
-OSN datasets can be either open access or protected. In the former case,
-keys are only needed to write new objects to the dataset otherwise, read
-access can be accomplished anonymously (e.g. as shown earlier for the
-anonymous cyberduck configuration). Protected datasets require keys for
-both reading and writing. When an open access dataset is created, the data manager
-for a project can use the read-write keys to upload data to the allocation. No keys are
-needed by users to download/read the data stored in the allocation.
+OSN buckets can be either **open access** or **protected**:
 
-Protected datasets have two sets of keys. One set allows writing to the
-dataset and is identical in function to the on previously described for
-open access datasets. The second set of keys provides read access to the
-dataset. Anonymous access is not allowed on protected datasets.
+- **Open access buckets** are readable by anyone without credentials ("anonymous access"). 
+  Writing new data still requires keys.
+- **Protected buckets** require keys to both read and write data.
 
-Keys are shared with users in two ways. Data managers can choose to
-share keys with other users "out of band" by simply sending other
-users keys that they are interested in via whatever secure mechanisms
-the project uses to store and communicate project-specific secrets (e.g.
-username/passwords, certificates, PKI material, access keys, etc.). Keys
-can also be managed using the OSN portal. A project in the OSN portal
-may have multiple allocations associated with it. Data managers for a
-project have access to all keys for a project\'s allocations. A data
-manager may share all project keys with another portal user by:
+Protected datasets have two sets of keys. One set allows reading and writing to the
+dataset while the second set of keys only provides read access. 
+Anonymous access is not allowed on protected datasets. For information on sharing credentials,
+see [the bucket documentation page]({{< relref "request-bucket#sharing-credentials" >}}).
 
-1.  Adding the portal user to the data manager\'s group
-2.  Assigning that group member the data manager role
-
-Once another portal user has been added to a group and given the data
-manager role for that group, she will have access to all the keys (and
-have the same privileges in the portal) as the original data manager for
-the group. Data managers may also add users to a group without assigning
-the user the data manager role. 
-
-An active research dataset can remain in OSN storage for up to
-five years.
+## Connecting to OSN buckets
 
 OSN supports a RESTful API that is compatible with the basic data access
 model of the [Amazon S3
 API](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html). Any
 software that complies with that API can access data stored on the OSN.
 
-There are two common methods for connecting to and using OSN
-resources:
+Here, we describe several popular tools in detail. 
+However, there are many more commercial and open source software tools for moving
+files to and from S3 buckets. OSN buckets are typically compatible with any 
+tool that supports AWS S3.
 
-1.  Third party desktop or CLI applications (e.g. Cyberduck, Rclone)
-2.  Third party data management server applications (e.g. Globus and
-    iRods)
+{{< callout note >}}
+Do you have a favorite tool for using OSN that we don't mention here? Let us 
+know at {{< help-email >}}!
+{{< /callout >}}
 
-Third Party Applications
-------------------------
+## Before you begin
 
-There are numerous commercial and open source software tools for moving
-files to and from S3 buckets. These tools provide more sophisticated
-capabilities than the built-in browser tool including transfer
-management, multi-upload management, and provide configuration options
-that can help optimize data transfer for a given computer/network
-environment.
+All S3 access methods require
 
-To use these tools, you will need to retrieve a pair of keys that are
-used to access the buckets stored on OSN. To retrieve these keys, you
-can contact your data manager and she will either give you keys or
-create an account for you on the OSN portal where you can retrieve these
-keys. If your data manager creates a portal account for you and gives
-you access to the keys you can visit [OSN
-Portal](https://coldfront.osn.mghpcc.org) to retrieve them; the allocations
-you have access to and their associated keys will be listed on your
-home page. See [the OSN portal documentation]({{< relref "portal/#using-the-osn-portal" >}}) for more information. 
+1. The bucket endpoint
+2. The bucket name
+3. For protected datasets, either the RW Access Key/Secret pair or the RO Access Key/Secret pair
 
-### Cyberduck
-
-Cyberduck is a popular file transfer tool that supports the S3 API. The
-following describes how to configure Cyberduck to connect to an OSN
-resource. Cyberduck is a \"cloud storage browser\" for Mac and Windows
-that supports multiple storage providers/protocols. The software may be
-downloaded at: [The Cyberduck Download
-Page](https://cyberduck.io/download/)
-
-Using Cyberduck with OSN is straightforward.
-
-1.  Visit the OSN portal to retrieve your Bucket location, bucket
-    name, and keys.
-2.  Open Cyberduck and select the bookmarks icon (see image below)
-3.  Click the add icon at the bottom left of the screen to create the
-    bookmark
-4.  Edit the new bookmark to point at the desired OSN pod using you
-    allocation key pair
+To find this info, see [the bucket attribute descriptions]({{< relref "request-bucket#bucket-attributes" >}}).
 
 
-{{< figure src="osn-bmark.png" caption="Selecting the bookmarks page and adding new bookmark" >}}
+## Desktop applications
 
-When specifying the server, use the hostname portion of the location
-(i.e. if the location is https://mghp.osn.xsede.org the hostname is
-`mghp.osn.xsede.org`).
+### Cyberduck (Windows, MacOS)
 
-When specifying \"Port\", use 443 if the location starts with \"https\";
-use 80 if the location starts with \"http\".
+[Cyberduck](https://cyberduck.io/) is a popular graphical file transfer tool that supports the S3 API.
+However, OSN requires a non-default S3 profile to connect to OSN. To enable the profile: 
 
-{{< figure src="osn-cyberdemo.png" caption="Adding OSN pod and user information to bookmark" >}}
+1. Open the Cyberduck "Preferences" pane from the "Edit" menu dropdown.
+2. Select "Profiles" and search for the **"S3 (Deprecated path style requests)"** profile.  
+{{< figure src="cyberduck-deprecated-path-profile.png" alt="Selecting the bookmarks menu and adding new bookmark" >}}
+3. Check the checkbox next to the **"S3 (Deprecated path style requests)"** profile to enable.
 
-#### Anonymous Access Data Sets
+To add your OSN bucket and access credentials:
 
-Some datasets provide anonymous read access; if you are accessing
-buckets anonymously, type \"anonymous\" into the Access ID portion and
-Cyberduck will then select the grayed out anonymous access box in the
-window.
+1.  Open Cyberduck and select the bookmarks icon
+{{< figure src="cyberduck-new-connection.png" alt="Selecting the bookmarks menu and adding new bookmark" >}}
+2.  Fill in the information corresponding with your OSN bucket.  
+{{< figure src="cyberduck-bookmark-config.png" alt="Selecting the bookmarks menu and adding new bookmark" >}}  
+    **Type:** S3 (Deprecated path style requests)  
+    **Nickname:** A name for your bookmark (only visible to you)
+    **Server:** your OSN bucket endpoint  
+    **Access Key ID:** your OSN bucket access key  
+    **Secret Access Key:** your OSN bucket access secret  
+    **Path (under "More Options"):** your OSN bucket name prefixed with "/". For example: `/osn-docs-example-bucket`
 
-{{< figure src="osn-cyberanon.png" caption="Using anonymous access as your user" >}}
+{{< callout note >}}
+When specifying the server, use the hostname portion of the endpoint
+(i.e. if the location is `https://mghp.osn.mghpcc.org` the hostname is
+`mghp.osn.mghpcc.org`).
+{{< /callout >}}
 
+If you are accessing an anonymous access bucket, use "anonymous" for the Access ID portion and
+Cyberduck will then select the grayed out anonymous access box in the window.
+
+{{< figure src="cyberduck-anonymous.png" alt="Using anonymous access as your user" >}}
 
 Exit the window for the bookmark to save.
 
 #### Browsing, Uploading, and Downloading
 
 Once a bookmark is created, you can use it to access data by
-double-clicking the bookmark. This logs your user in and lists the
+double-clicking the bookmark. This logs you in and lists the
 contents of the dataset.
 
-**Note:** If your buckets have large object counts, you will need to
+{{< callout note >}}
+If your buckets have large object counts, you will need to
 increase the Timeout settings for connections.
 
-Go to Preference \> Connection and change the box next to Timeout for
+Go to `Preferences > Connection` and change the box next to Timeout for
 opening connections (seconds) and change the setting to 90 seconds.
+{{< /callout >}}
 
-{{< figure src="osn-cyberdir.png" caption="UDirectory listing within bucket" >}}
+{{< figure src="cyberduck-success.png" caption="Directory listing within bucket." >}}
 
 
 Cyberduck client is a full-fledged transfer client so desktop
-up/downloads can be easily performed for data sets.
-
-The tool supports multiple upload/download streams, chunking, pausing
+up/downloads can be easily performed for data sets. The tool supports multiple upload/download streams, chunking, pausing
 and restarting.
 
 ### Rclone

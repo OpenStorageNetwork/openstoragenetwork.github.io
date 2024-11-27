@@ -3,6 +3,7 @@ title: Transfer Data to OSN
 prev: dataset-access
 next: tips
 weight: 70
+draft: true
 ---
 
 OSN data sets are comprised of [Ceph
