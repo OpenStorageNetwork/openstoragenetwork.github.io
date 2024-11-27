@@ -103,35 +103,25 @@ row to view their project-specific detail page.
 {{< figure src="user-role.png" alt="OSN user project-specific detail view" >}}
 3. Click the **Update** button to save the role change.
 
-<!-- -   Principal Investigator - Responsible for the allocation and serves
-    as either the Data Manager or the Alternate Data Manager for the
-    allocation.
+### Assign users to specific buckets
 
--   Data Manager:
+Project managers can allow or disallow access to view bucket credentials to
+each user in the project. 
 
-    > -   Adds/removes data curators and data managers
-    > -   Adds/removes end users for protected data
-    > -   Maintain Data Set Landing Page Information
-    > -   Monitors capacity vs utilization and requests allocation
-    >     changes when needed
+{{< callout warning >}}
+Disallowing access to a user via the OSN portal does not prevent them from
+using existing keys if they have the keys already. If you need to regenerate
+a key to fully remove access, email {{< help-email >}}.
+{{< /callout >}}
 
--   The OSN Portal is used by PIs/Data managers to manage their
-    allocations. The Portal uses CiLogon for authentication, and
-    provides bucket administration tools to the PI/Data Manager who
-    requested the allocation. When requesting an allocation, the PI
-    provides an identity that is recognized by CILogon. After the bucket
-    is created, the PI can log in to the OSN Portal and administer
-    access to the bucket.
+To add or remove a user's access to a certain bucket:
 
--   Data Curator - Maintains the data set
+1. Navigate to the "Allocations" section on the project.
+2. Click on the "allocation detail" button in the row corresponding with the bucket to modify.  
+{{< figure src="bucket-detail-button.png" alt="Bucket detail icon location." >}}
+3. Use the "Add Users" or "Remove Users" options to manage access.
+{{< figure src="bucket-add-user.png" alt="Add / remove user button location." >}}
 
--   End User:
-
-    > -   Has read access to all of the data in the bucket.
-    >     Public-access buckets allow access to anyone who has the name
-    >     of the pod and bucket. Authenticated access buckets allow
-    >     access to anyone who has the READ key.
-    > -   Registers via any identity service that is trusted by the data
-    >     manager (InCommon, ORCID, Github, Google, Amazon, etc.
-    > -   Logs in after receiving an invitation from a Data Manager or
-    >     OSN Operations -->
+{{< callout note >}}
+To add a user to a bucket, they must be a member of the project first.
+{{< /callout >}}
