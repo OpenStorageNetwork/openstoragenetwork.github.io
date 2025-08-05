@@ -55,7 +55,7 @@ To use Restic in an automated way (for example, [on a schedule]({{< relref "#set
 This method saves your credentials to plain text. Ensure you're on a trusted system before using this method. If you're using Restic in a shared cluster environment, these credentials will be accessible by the systems administration team.
 {{< /callout >}}
 
-Restic understands `RESTIC_REPOSITORY` and `RESTIC_PASSWORD` to retrieve the repository and backup password. You can set these environment variables in a location that is automatically sources, such as your `~/.bashrc`, as part of a backup script, or in a file to source manually ahead of the backup. For example, in a bash shell, you can save the following file to `run_restic_backup.sh`:
+Restic understands `RESTIC_REPOSITORY` and `RESTIC_PASSWORD` to retrieve the repository and backup password. You can set these environment variables in a location that is automatically sourced, such as your `~/.bashrc`, as part of a backup script, or in a file to source manually ahead of the backup. For example, in a bash shell, you can save the following file to `run_restic_backup.sh`:
 
 ```
 #!/bin/bash
